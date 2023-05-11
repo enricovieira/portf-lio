@@ -5,8 +5,9 @@ import imgNode from "../public/static/img/stack/node.svg";
 import imgStyled from "../public/static/img/stack/styled.svg";
 import imgReact from "../public/static/img/stack/react.svg";
 import { FaVuejs } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { FaDocker } from "react-icons/fa";
+import { SiTypescript, SiTailwindcss, SiChakraui } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { DiDjango, DiPython } from "react-icons/di";
 
 export const stackData = [
   {
@@ -35,5 +36,9 @@ export const stackData = [
   },
   { title: "Vuejs", img: FaVuejs },
   { title: "TypeScript", img: SiTypescript },
-  { title: "Docker", img: FaDocker },
+  { title: "TailWind", img: SiTailwindcss },
+  { title: "NextJS", img: TbBrandNextjs },
+  { title: "ChakraUi", img: SiChakraui },
+  { title: "Django", img: DiDjango },
+  { title: "Python", img: DiPython },
 ];

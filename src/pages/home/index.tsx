@@ -22,8 +22,11 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectsAreaContent,
   ProjectAreaWrapperColumns,
+  ProjectLinks,
+  ProjectLink,
 } from "./style";
-
+import { FaGithub } from "react-icons/fa";
+import { SiVercel } from "react-icons/si";
 
 export const Home = (): JSX.Element => {
   return (
@@ -35,9 +38,17 @@ export const Home = (): JSX.Element => {
               Criando experiências por meio da tecnologia{" "}
             </Text>
             <Text type="body1" color="grey6">
-              Sou estudante de programação na Kenzie Academy Brasil, participei
-              de diversos projetos resolvendo problemas de alto nível e
-              desenvolvendo habilidades
+              Sou formado em Ciências Biológicas - Licenciatura pela
+              Universidade Positivo e Certificado como Desenvolvedor Full-stack
+              pela Kenzie Academy Brasil, no momento estou em transição de
+              carreira para a área da tecnologia. Durante o período de
+              universidade trabalhei em colégios e laboratório, tive experiência
+              na área da pesquisa, trabalhando no setor de controle de
+              qualidades de vacina no TECPAR. Quando decidi migrar de área
+              acabei me encontrando na área de tecnologia e me apaixonei por
+              aprender sobre programação. Já desenvolvi trabalhos que simulam o
+              mercado de trabalho real do mundo da programação, como e-commerce,
+              blogs, rede sociais, etc.
             </Text>
             <HeaderButtonsArea>
               <Button as="a" href="#projetos">
@@ -94,6 +105,24 @@ export const Home = (): JSX.Element => {
                 </Text>{" "}
                 em cada detalhe
               </Text>
+              <Text as="h3" type="heading2" color="grey1">
+                Projeto em destaque: Kenzie Motors
+              </Text>
+              <ProjectLinks>
+                <ProjectLink
+                  target="_blank"
+                  href="https://github.com/grupo24-t13-marcelo/front-end"
+                >
+                  <FaGithub /> Github Code
+                </ProjectLink>
+                <ProjectLink>
+                  <SiVercel
+                    target="_blank"
+                    href="motor-shop-dusky.vercel.app"
+                  />
+                  Vercel Link
+                </ProjectLink>
+              </ProjectLinks>
               <Project />
             </ProjectsAreaContent>
           </ProjectAreaWrapperColumns>

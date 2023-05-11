@@ -88,3 +88,25 @@ export const ProjectAreaWrapperColumns = styled(Flex, {
     flexDirection: "column",
   },
 });
+
+export const ProjectLinks = styled(Flex, {
+  marginTop: "2.25rem",
+});
+
+export const ProjectLink = styled("a", {
+  fontSize: "1rem",
+  color: "$grey2",
+  fontWeight: "500",
+  marginRight: "$2",
+  display: "flex",
+  alignItems: "center",
+  lineHeight: "0",
+
+  "&:hover":{
+    color: "$grey1"
+  },
+
+  [`& svg`]: {
+    marginRight: "$1"
+  }
+});

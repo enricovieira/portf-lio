@@ -27,7 +27,7 @@ export const Project = (): JSX.Element => {
     const fetchData = async () => {
       const data: Response = await fetch(
         `https://api.github.com/users/${userData.githubUser}/repos`
-      )
+      );
 
       const json = await data.json();
 
@@ -44,43 +44,150 @@ export const Project = (): JSX.Element => {
 
   return (
     <>
-      {repositories?.map((repository) => (
-        <ProjectWrapper key={repository.id}>
-          <Text
-            as="h2"
-            type="heading3"
-            css={{ marginBottom: "$3" }}
-            color="grey1"
+      <ProjectWrapper>
+        <Text
+          as="h2"
+          type="heading3"
+          css={{ marginBottom: "$3" }}
+          color="grey1"
+        >
+          EzBracket
+        </Text>
+
+        <ProjectStack>
+          <Text type="body2">Linguagem:</Text>
+          <ProjectStackTech>
+            <Text color="brand1" type="body2">
+              React
+            </Text>
+          </ProjectStackTech>
+        </ProjectStack>
+
+        <Text type="body1" color="grey2">
+          Projeto de Gerenciamento de torneios
+        </Text>
+        <ProjectLinks>
+          <ProjectLink
+            target="_blank"
+            href="https://github.com/ez-Bracket/ez-bracket"
           >
-            {repository.name}
-          </Text>
+            <FaGithub /> Github Code
+          </ProjectLink>
 
-          {repository.language && (
-            <ProjectStack>
-              <Text type="body2">Linguagem:</Text>
-              <ProjectStackTech>
-                <Text color="brand1" type="body2">
-                  {repository.language}
-                </Text>
-              </ProjectStackTech>
-            </ProjectStack>
-          )}
+          <ProjectLink target="_blank" href="https://ez-bracket.vercel.app/">
+            <FaShare /> Aplicação
+          </ProjectLink>
+        </ProjectLinks>
+      </ProjectWrapper>
+      <ProjectWrapper>
+        <Text
+          as="h2"
+          type="heading3"
+          css={{ marginBottom: "$3" }}
+          color="grey1"
+        >
+          EzBracket Back-end
+        </Text>
 
-          <Text type="body1" color="grey2">
-            {repository.description}
-          </Text>
-          <ProjectLinks>
-            <ProjectLink target="_blank" href={repository.git_url}>
-              <FaGithub /> Github Code
-            </ProjectLink>
-            {repository.homepage && (
-              <ProjectLink target="_blank" href={repository.homepage}>
-                <FaShare /> Aplicação
-              </ProjectLink>
-            )}
-          </ProjectLinks>
-        </ProjectWrapper>
-      ))}
+        <ProjectStack>
+          <Text type="body2">Linguagem:</Text>
+          <ProjectStackTech>
+            <Text color="brand1" type="body2">
+              NodeJs
+            </Text>
+          </ProjectStackTech>
+        </ProjectStack>
+
+        <Text type="body1" color="grey2">
+          Projeto de Gerenciamento de torneios
+        </Text>
+        <ProjectLinks>
+          <ProjectLink
+            target="_blank"
+            href="https://github.com/ez-Bracket/server"
+          >
+            <FaGithub /> Github Code
+          </ProjectLink>
+        </ProjectLinks>
+      </ProjectWrapper>
+
+      <ProjectWrapper>
+        <Text
+          as="h2"
+          type="heading3"
+          css={{ marginBottom: "$3" }}
+          color="grey1"
+        >
+          Kenzie Burguer
+        </Text>
+
+        <ProjectStack>
+          <Text type="body2">Linguagem:</Text>
+          <ProjectStackTech>
+            <Text color="brand1" type="body2">
+              React
+            </Text>
+          </ProjectStackTech>
+        </ProjectStack>
+
+        <Text type="body1" color="grey2">
+          Projeto que simula um e-commerce de um restaurante fast-food
+        </Text>
+        <ProjectLinks>
+          <ProjectLink
+            target="_blank"
+            href="https://github.com/enricovieira/projeto-hamburgueria"
+          >
+            <FaGithub /> Github Code
+          </ProjectLink>
+
+          <ProjectLink
+            target="_blank"
+            href="https://kenzie-hamburgueria-sable.vercel.app/"
+          >
+            <FaShare /> Aplicação
+          </ProjectLink>
+        </ProjectLinks>
+      </ProjectWrapper>
+      <ProjectWrapper>
+        <Text
+          as="h2"
+          type="heading3"
+          css={{ marginBottom: "$3" }}
+          color="grey1"
+        >
+          KenzieHub
+        </Text>
+
+        <ProjectStack>
+          <Text type="body2">Linguagem:</Text>
+          <ProjectStackTech>
+            <Text color="brand1" type="body2">
+              React
+            </Text>
+          </ProjectStackTech>
+        </ProjectStack>
+
+        <Text type="body1" color="grey2">
+          Projeto para que você possa cadastrar as tencnologias que sabe ou está
+          aprendendo
+        </Text>
+        <ProjectLinks>
+          <ProjectLink
+            target="_blank"
+            href="https://github.com/enricovieira/react-entrega-kenzie-hub"
+          >
+            <FaGithub /> Github Code
+          </ProjectLink>
+
+          <ProjectLink
+            target="_blank"
+            href="https://react-entrega-kenzie-hub-rho.vercel.app/"
+          >
+            <FaShare /> Aplicação
+          </ProjectLink>
+        </ProjectLinks>
+      </ProjectWrapper>
     </>
   );
 };
